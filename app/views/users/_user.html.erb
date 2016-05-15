@@ -1,0 +1,6 @@
+<%= image_tag("user.png", :alt => "user", size: "64", class: "avatar") %>
+<h1><%= current_user.name %></h1>
+<span><%= link_to "view my profile", current_user %></span>
+<span><%= pluralize(current_user.attended_events.count, "event") %> attended</span>
+<span><%= pluralize(current_user.created_events.count, "event") %> created</span>
+<%= button_to "Create Event", new_event_path, method: :get , class: "new-event-btn btn btn-primary" %>

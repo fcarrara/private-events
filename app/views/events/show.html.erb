@@ -1,0 +1,12 @@
+<h1><%= @event.title %></h1>
+<p class="event-show-creator">This event is organized by: <%= link_to @event.creator.name, user_path(@event.creator) %></p>
+<div class="panel-container col-md-6 col-md-offset-3">
+  <p class="event-show-description"><%= @event.description %></p>
+  
+  <p class="event-show-location"><i class="material-icons md-18">place</i>&nbsp<%= @event.location %></p>
+  <p class="event-show-date"><i class="material-icons md-18">date_range</i>&nbsp<%= @event.date.strftime("%a, %b %e %l:%m %p") %></p>
+  <%= render 'attendees' %>
+  <% if @event.date.future? && logged_in? %>
+    <%= render 'attend_form' %>
+  <% end %>
+</div>
