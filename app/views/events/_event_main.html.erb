@@ -1,7 +1,7 @@
 <%= link_to event_path(event) do %>
   <div class="event-main">
     <p class="event-location"><%= event.location %></p>
-    <p class="event-date"><%= event.date.strftime("%a, %b %e %l:%m %p") %></p>
+    <p class="event-date"><%= event.date.strftime("%a, %b %e %l:%M %p") %></p>
     <h2 class="event-title"><%= event.title %></h2>
     <p class="event-description"><%= event.description %></p>
   </div>

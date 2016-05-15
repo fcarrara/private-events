@@ -4,7 +4,7 @@
   <p class="event-show-description"><%= @event.description %></p>
   
   <p class="event-show-location"><i class="material-icons md-18">place</i>&nbsp<%= @event.location %></p>
-  <p class="event-show-date"><i class="material-icons md-18">date_range</i>&nbsp<%= @event.date.strftime("%a, %b %e %l:%m %p") %></p>
+  <p class="event-show-date"><i class="material-icons md-18">date_range</i>&nbsp<%= @event.date.strftime("%a, %b %e %l:%M %p") %></p>
   <%= render 'attendees' %>
   <% if @event.date.future? && logged_in? %>
     <%= render 'attend_form' %>
