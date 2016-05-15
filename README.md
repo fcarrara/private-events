@@ -5,3 +5,5 @@ The projet is similar to a private Eventbrite which allows users to create event
 ####The techniques practiced:
 
 * Active Record Associations
+
+Check it out! [App in Heroku](https://private-events-rails.herokuapp.com)
